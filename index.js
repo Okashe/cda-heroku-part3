@@ -1,10 +1,12 @@
 import 'dotenv/config';
+import cors from "cors";
 import express from "express";
 import warehouseRoutes from "./routes/warehouseRoute.js";
 import inventoryRoutes from "./routes/inventoryRoute.js";
 
 const app = express();
 const PORT = process.env.PORT || 5050;
+app.use(cors());
 
 app.use(express.json());
 
